@@ -1,14 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Your Notes') }}
+            {{ __('Create Notes') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
 
         <section class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-col justify-center items-center">
-            <form class="w-full mb-2" action="{{ url('/notes/store') }}" method="POST">
+            <form class="w-full mb-2" action="{{ route('notes.store') }}" method="POST">
                 @csrf
                 @method('POST')
                 <div class="flex flex-col mb-3 py-2">
@@ -19,6 +19,7 @@
                 </div>
                 <div class="flex flex-col mb-3">
                     <label class= "block text-gray-700 text-sm font-bold mb-2" for="body">Body</label>
+
                     <textarea id="editor" class="shadow appearance-none bg-transparent border-2 border-gray-400 w-full text-gray-700 mr-3 py-1 px-4 leading-tight focus:outline-none" name="body" rows="5" placeholder="...and here goes your note body" >{{  old('body') }}</textarea>
                 </div>
 

@@ -38,3 +38,5 @@ Route::group(['middleware' => ['auth:sanctum', 'verified'], 'prefix' => 'notes']
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->post('ckeditor/image_upload', 'CKEditorController@upload')->name('upload');
+
+Addchat::routes();

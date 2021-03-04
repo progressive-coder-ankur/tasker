@@ -53,7 +53,12 @@ class NotesController extends Controller
             'user_id' => $request->user()->id,
             'title'   => $request->title,
             'slug'    => Str::slug($request->title),
-            'body'    => $request->body
+            'body'    => $request->body,
+        ]);
+
+        Notes::create([
+            'notes-trixFields' => request('notes-trixFields'),
+            'attachment-notes-trixFields' => request('attachment-notes-trixFields')
         ]);
 
         return redirect()->route('notes');

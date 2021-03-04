@@ -19,7 +19,6 @@
                 </div>
                 <div class="flex flex-col mb-3">
                     <label class= "block text-gray-700 text-sm font-bold mb-2" for="body">Body</label>
-                    <textarea id="editor" class="shadow appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-4 leading-tight focus:outline-none" name="body" rows="5" >{{ $note->body }}</textarea>
                     <textarea id="letters" class="shadow appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-4 leading-tight focus:outline-none" name="body" rows="5" >{{ $note->body }}</textarea>
                 </div>
 
